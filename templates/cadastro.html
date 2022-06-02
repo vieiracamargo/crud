@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+  </head>
+<body>
+    <div class="container">
+      <h1>CADASTRO DE USUÁRIO!</h1>
+      <form method="POST" action="/user/create">
+        <p>
+          <label for="user">
+            Nome de Usuário
+            <input class="input" type="text" name="usuario" id="user" required placeholder="Username">
+          </label>
+        </p>
+        <p>
+          <label for="pass">
+            Senha
+            <input class="input" type="password" name="senha"  id="pass" required placeholder="Password">
+          </label>
+        </p>
+        <p>
+          <label for="email">
+            Email
+            <input  class="input" type="email" name="email" id="email" required placeholder="youremail@provider.com">
+          </label>
+        </p>
+        <p>
+          <label for="telefone">
+            Telefone
+            <input class="input" type="tel" name="telefone" id="telefone" required placeholder="(XX) X-XXXX-XXXX">
+          </label>
+        </p>
+        <p>
+          <label for="cpf">
+            CPF
+            <input class="input" type="text" name="cpf" id="cpf" required placeholder="Digite sem pontos.">
+          </label>
+        </p>
+        <p>
+          <label for="data-nascimento">
+            Data de Nascimento
+            <input class="input" type="date" name="data-nascimento" id="data-nascimento" required>
+          </label>
+        </p>
+        <button id="button" type="submit">
+          CADASTRAR
+        </button>
+        <a href="/">Voltar</a>
+      </form>
+    </div>
+</body>
+</html>

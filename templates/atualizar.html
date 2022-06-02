@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atualizar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+  </head>
+<body>
+    <div class="container">
+      <h1>ATUALIZAR CADASTRO</h1>
+      <form method="POST" >
+        <p>
+          <label for="user">
+            Nome de Usuário
+            <input class="input" type="text" name="usuario" id="user" required placeholder="Username" value="{{ pessoa.nome}}">
+          </label>
+        </p>
+        <p>
+          <label for="pass">
+            Senha
+            <input class="input" type="password" name="senha"  id="pass" required placeholder="Password" value="{{ pessoa.senha}}">
+          </label>
+        </p>
+        <p>
+          <label for="email">
+            Email
+            <input  class="input" type="email" name="email" id="email" required placeholder="youremail@provider.com" value="{{ pessoa.email}}">
+          </label>
+        </p>
+        <p>
+          <label for="telefone">
+            Telefone
+            <input class="input" type="tel" name="telefone" id="telefone" required placeholder="(XX) X-XXXX-XXXX" value="{{ pessoa.telefone}}">
+          </label>
+        </p>
+        <p>
+          <label for="cpf">
+            CPF
+            <input class="input" type="text" name="cpf" id="cpf" required placeholder="Digite sem pontos." value="{{ pessoa.cpf}}">
+          </label>
+        </p>
+        <p>
+          <label for="data-nascimento">
+            Data de Nascimento
+            <input class="input" type="date" name="data-nascimento" id="data-nascimento" required value="{{ pessoa.data_nascimento}}">
+          </label>
+        </p>
+        <button id="button" type="submit">
+          ATUALIZAR
+        </button>
+      </form>
+    </div>
+</body>
+</html>

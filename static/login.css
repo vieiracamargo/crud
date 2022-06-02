@@ -1,0 +1,81 @@
+
+body{
+    background-image: linear-gradient(to right, #0F5068 , #143B5F, #182154);
+}
+
+.container{
+    text-align: center;
+    font-size: 30px;
+    height: 600px;
+    width: 600px;
+    margin: 100px auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#login{
+    color: #1A1F88;
+    text-align:left;
+    font-size: 20px;
+    height: 400px;
+    width: 400px;
+    margin: 50px auto;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+.input{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    border-radius: 05px;
+    border: solid 2px #1A1F88;
+}
+
+#button{
+    display: block;
+    margin: 20px auto;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #1A1F88;
+    font-weight: bold;
+    border: none;
+}
+
+#button:hover{
+    transform: scale(1.2)
+}
+
+#result{
+    text-align: center;
+}
+
+#cadastro{
+    display:block;
+    text-align: center;
+    margin: 5px;
+    text-decoration: none;
+}
+
+#cadastro:hover{
+     text-decoration: underline;
+     transform: scale(1.2);
+}
+
+#lista-usuarios{
+    color: white;
+    text-decoration: none;
+}
+
+#lista-usuarios:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}

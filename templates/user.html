@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Senha</td>
+            <td>Email</td>
+            <td>Telefone</td>
+            <td>CPF</td>
+            <td>Data de Nascimento</td>
+            <td>Excluir</td>|
+            <td>Atualizar</td>
+        </tr>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{ pessoa._id}}</td>
+            <td>{{ pessoa.nome}}</td>
+            <td>{{ pessoa.senha}}</td>
+            <td>{{ pessoa.email}}</td>
+            <td>{{ pessoa.telefone}}</td>
+            <td>{{ pessoa.cpf}}</td>
+            <td>{{ pessoa.data_nascimento}}</td>
+            <td><a href="/user/delete/{{ pessoa._id }}">X</a></td>
+            <td><a href="/user/update/{{ pessoa._id }}">Atualizar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a id="voltar" href="/">Voltar</a>
+</body>
+</html>
